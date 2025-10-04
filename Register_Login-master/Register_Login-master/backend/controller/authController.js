@@ -58,7 +58,7 @@ export async function loginUser(req, res) {
       user,
     });
   } catch (err) {
-    console.error('❌ loginUser error:', err);
+    console.log('❌ loginUser error:', err);
     return res.status(500).json({ error: 'Internal Server Error' });
   }
 }
