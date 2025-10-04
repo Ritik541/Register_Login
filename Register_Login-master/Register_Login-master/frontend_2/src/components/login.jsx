@@ -12,7 +12,7 @@ const Login = () => {
     const loginUser = async () => {
         if (email !== "" && email.trim() !== "" && password !== "" && password.trim() !== "") {
             const data = { email, password };
-            const api_url = "http://localhost:3435/api/login";
+            const api_url = "https://register-login-06.onrender.com/api/login";
             const res = await axios.post(api_url, data);
             navigate("/profile",{state : {user : res.data.user}});
             setError("Invalid email or password");

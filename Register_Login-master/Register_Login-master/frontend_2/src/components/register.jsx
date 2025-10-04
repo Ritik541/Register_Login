@@ -17,7 +17,7 @@ const Register = () => {
         {
             if(password === confirmPassword) {
                 const data = {name, email, password};
-                const api_url = "http://localhost:3435/api/register";
+                const api_url = "https://register-login-06.onrender.com/api/register";
                 const res = await axios.post(api_url, data);
                 navigate("/",{state : {user : {name,email,password}}});
             }
